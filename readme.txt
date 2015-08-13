@@ -21,11 +21,11 @@ When activating for an entire network, each site will have it's own taxonomy ter
 
 == Frequently Asked Questions ==
 
-= Does this create new database tables?
+= Does this create new database tables? =
 
 Yes. It creates a new `wp_terms` database table for each site it's activated on.
 
-= Does this modify existing database tables?
+= Does this modify existing database tables? =
 
 No. All of WordPress's core database tables remain untouched.
 
@@ -41,3 +41,4 @@ http://github.com/johnjamesjacoby/wp-term-meta/
 
 = 0.1.0 =
 * Initial release
+
