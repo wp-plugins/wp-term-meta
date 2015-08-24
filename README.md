@@ -7,12 +7,12 @@ WP Term Meta allows developers to store key/value pairs of data along with a cat
 # Installation
 
 * Download and install using the built in WordPress plugin installer.
-* Activate in the "Plugins" network admin panel using the "Activate" link.
-* When activating for an entire network, each site will have it's own taxonomy term metadata.
+* Activate in the "Plugins" area of your admin by clicking the "Activate" link.
+* No further setup or configuration is necessary.
 
 # Usage
 
-### add_meta_data()
+### add_term_meta()
 
 ```
 /**
@@ -29,7 +29,7 @@ WP Term Meta allows developers to store key/value pairs of data along with a cat
  */
 ```
 
-### delete_meta_data()
+### delete_term_meta()
 
 ```
 /**
@@ -109,15 +109,17 @@ http://codex.wordpress.org/Class_Reference/WP_Meta_Query
 
 ```
 $terms = get_terms( 'category', array(
-	'depth'      => 1,
-	'number'     => 100,
-	'parent'     => 0,
-	'orderby'    => 'order', // Try the "wp-term-order" plugin!
-	'order'      => 'ASC',
-	'hide_empty' => false,
-	'meta_query' => array( array(
-		'key' => 'term_thumbnail'
-	) )
+        'depth'      => 1,
+        'number'     => 100,
+        'parent'     => 0,
+        'orderby'    => 'order', // Try the "wp-term-order" plugin!
+        'order'      => 'ASC',
+        'hide_empty' => false,
+
+        // Looky looky!
+        'meta_query' => array( array(
+                'key' => 'term_thumbnail'
+        ) )
 ) );
 ```
 
